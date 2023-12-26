@@ -15,11 +15,13 @@ import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity2 extends AppCompatActivity {
 
     TextView loginTextView;
+    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,7 @@ public class MainActivity2 extends AppCompatActivity {
         loginTextView.setText(stringBuilder);
 
         Button showUsersButton = findViewById(R.id.button1);
+        imageView = findViewById(R.id.imageView7);
         showUsersButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,4 +89,12 @@ public class MainActivity2 extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
+    public void StartThird(View view) {
+        Intent intent = new Intent(this,Colocol.class);
+        startActivity(intent);
+    }
+    public void hideImage() {
+        imageView.setVisibility(View.GONE);
+    }
+
 }
