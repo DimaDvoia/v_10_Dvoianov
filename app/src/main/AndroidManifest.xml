@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Dvoianov_v_10"
         tools:targetApi="31">
         <activity
+            android:name=".Colocol"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity2"
             android:exported="false" />
         <activity

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
@@ -69,7 +70,20 @@ public class MainActivity2 extends AppCompatActivity {
 
                 cursor.close();
                 db.close();
+
+
             }
         });
+    }
+
+    public void StartFirst(View view) {
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void ToSite(View view){
+        Uri uri = Uri.parse("https://www.s7.ru/en/info/s7-airlines/brand/");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
     }
 }
